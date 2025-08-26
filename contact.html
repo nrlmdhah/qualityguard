@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUALITY GUARD SERVICES SDN.BHD. - Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-image: url("images/contact.jpg");
+        background-size: cover;
+        background-position: center;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #dc354600;
+        border-bottom: 3px solid transparent;
+        padding: 10px 20px;
+        position: relative;
+      }
+
+      .navbar::after {
+        content: "";
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #6ccf5f7c;
+        animation: moveBorder 3s linear infinite;
+      }
+
+      @keyframes moveBorder {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      .navbar-brand {
+        color: #ffffff !important;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 20px;
+      }
+
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      .nav-link {
+        color: #ffffff !important;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #4f8348 !important;
+      }
+
+      .dropdown-menu {
+        background-color: #dc35464f;
+        border: none;
+      }
+
+      .dropdown-item {
+        color: #ffffff !important;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #6ccf5f7c;
+        color: #ffffff !important;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #64161e83;
+        color: #ffffff;
+        padding: 40px 0;
+        border-top: 3px solid #6ccf5f44;
+      }
+
+      .footer h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer p i {
+        font-size: 1.2rem;
+        color: #6ccf5f7c;
+      }
+
+      .footer a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #6ccf5f7c;
+      }
+
+      .contact-us-container {
+        background: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+        padding: 6rem 0;
+        color: white;
+        height: 100vh;
+      }
+
+      .contact-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .contact-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      .contact-subtitle {
+        font-size: 1.25rem;
+        color: #e9e9e9;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.8;
+      }
+
+      .contact-card {
+        background-color: #f8f9fa79; /* Neutral color (light grey) */
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+        max-height: 650px; /* Limit the height to prevent overflow */
+        overflow: auto; /* Allow scroll if content overflows */
+      }
+
+      .contact-card .left-column,
+      .contact-card .right-column {
+        flex: 1;
+      }
+
+      .location-title,
+      .form-title {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .location-text {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .location-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .location-link:hover {
+        text-decoration: underline;
+      }
+
+      .enquiry-form-col input,
+      .enquiry-form-col textarea {
+        border-radius: 25px;
+        padding: 1rem;
+        border: 2px solid #ddd;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+        width: 100%;
+      }
+
+      .enquiry-form-col input:focus,
+      .enquiry-form-col textarea:focus {
+        border-color: #82cf5f;
+        box-shadow: 0 0 10px rgba(130, 207, 95, 0.5);
+        outline: none;
+      }
+
+      .submit-btn {
+        margin-top: 1.5rem;
+        color: #fff;
+        background-color: #82cf5f;
+        border-radius: 30px;
+        padding: 0.75rem 2rem;
+        border: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background-color: #6bba4f;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 991px) {
+        .contact-card {
+          flex-direction: column;
+          gap: 2rem;
+          max-height: unset; /* Remove max height on smaller screens */
+        }
+      }
+
+      /* Google Map Section */
+      .map-container {
+        margin-top: 2rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      iframe {
+        width: 100%;
+        height: 250px; /* Reduced map size */
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="aboutDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li>
+                <a class="dropdown-item" href="who-we-are.html">Who We Are</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="training.html">Training</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="Quality Guard Services Logo"
+                style="height: 40px; width: auto"
+              />
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="partnersDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Our Partners
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+              <li>
+                <a class="dropdown-item" href="client.html">Clients</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="vendor.html">Vendor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-us-container">
+      <div class="container">
+        <div class="contact-header">
+          <h2 class="contact-title">Get In Touch</h2>
+          <p class="contact-subtitle">
+            We're excited to hear from you! Please reach out for inquiries,
+            feedback, or collaboration.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <!-- Contact Info Section (Left) -->
+          <div class="left-column">
+            <h3 class="location-title">Our Location</h3>
+            <p class="location-text">
+              <i class="fas fa-map-marker-alt"></i>
+              <a
+                href="https://maps.app.goo.gl/iJnjcPeRfLUGR9sR9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="location-link"
+              >
+                B-17-1, Jalan Medan Selayang 1, <br />
+                Medan Selayang, 68100 Batu Caves, <br />
+                Selangor, Malaysia.
+              </a>
+            </p>
+            <p class="location-text">
+              <i class="fas fa-phone-alt"></i>
+              <strong>Office Number:</strong> 03-61873250
+            </p>
+            <p class="location-text">
+              <i class="fas fa-envelope"></i>
+              <strong>Email Address:</strong>
+              qualityqssb@yahoo.com
+            </p>
+
+            <h4 class="form-title">Find Us Here</h4>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.533874203476!2d101.66701901394467!3d3.2163608712340547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3cb618d2afcf%3A0x30d2f91ea9c4ff7d!2sBoulevard%20Business%20Park!5e0!3m2!1sen!2smy!4v1676486855459!5m2!1sen!2smy"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Enquiry Form Section (Right) -->
+          <div class="right-column">
+            <h4 class="form-title">Send Us Your Message</h4>
+            <form>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="phone" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer text-center text-lg-start">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h5>QUALITY GUARD SERVICES SDN BHD</h5>
+            <p>
+              <i class="bi bi-envelope"></i>
+              <a href="mailto:qualityqssb@yahoo.com">qualityqssb@yahoo.com</a>
+            </p>
+            <p>
+              <i class="bi bi-telephone"></i>
+              <a href="tel:03-61873250">03-61873250</a>
+            </p>
+            <p>
+              <i class="bi bi-geo-alt"></i>
+              B-17-1, Jalan Medan Selayang 1, Medan Selayang, 68100 Batu Caves,
+              Selangor, Malaysia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons CDN for Social Media Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
